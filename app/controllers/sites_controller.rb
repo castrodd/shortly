@@ -8,7 +8,7 @@ class SitesController < ApplicationController
     end
 
     def show
-       @site = Site.last
+       redirect_to Site.last.name
     end
 
     def create
@@ -24,7 +24,7 @@ class SitesController < ApplicationController
     private
 
     def site_params
-      allow = [:name]
+      allow = [:name, :id]
       params.require(:site).permit(allow)
     end
 end
