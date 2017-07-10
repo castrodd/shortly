@@ -7,6 +7,12 @@ class SitesController < ApplicationController
     end
 
     def create
+      @site = Site.create(params[:site])
 
+      if @site.save
+        redirect_to @site
+      else
+        redirect_to :action => "new"
+      end
     end
 end
