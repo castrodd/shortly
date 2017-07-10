@@ -1,3 +1,3 @@
-# Shorty
+# Shortly
 
-Shorty is a bitly-like URL shortener.
+Shortly is a bitly-like URL shortener.
