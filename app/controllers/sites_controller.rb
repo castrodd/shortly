@@ -1,6 +1,6 @@
 class SitesController < ApplicationController
     def index
-      @sites = Site.last
+      @site = Site.last
     end
 
     def new
