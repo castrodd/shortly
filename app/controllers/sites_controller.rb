@@ -8,6 +8,7 @@ class SitesController < ApplicationController
     end
 
     def show
+      redirect_to Site.last.name
     end
 
     def create
