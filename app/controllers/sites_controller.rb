@@ -1,7 +1,6 @@
 class SitesController < ApplicationController
     def index
       @site = Site.last
-      render :new
     end
 
     def new
@@ -9,7 +8,6 @@ class SitesController < ApplicationController
     end
 
     def show
-       redirect_to Site.last.name
     end
 
     def create
