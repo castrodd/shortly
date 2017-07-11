@@ -15,9 +15,9 @@ class SitesController < ApplicationController
       @site = Site.create(site_params)
 
       if @site.save
-        redirect_to :action => "index"
+        redirect_to sites_path
       else
-        redirect_to :action => "new"
+        redirect_to new_site_path
       end
     end
 
