@@ -1,6 +1,5 @@
 class SitesController < ApplicationController
     def index
-      @site = Site.last
     end
 
     def new
@@ -15,7 +14,7 @@ class SitesController < ApplicationController
       @site = Site.create(site_params)
 
       if @site.save
-        redirect_to sites_path
+        redirect_to site_path(:id)
       else
         redirect_to new_site_path
       end
@@ -24,7 +23,7 @@ class SitesController < ApplicationController
     private
 
     def site_params
-      allow = [:name, :id]
+      allow = [:name]
       params.require(:site).permit(allow)
     end
 end
