@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root 'sites#new'
   resources :sites
   get '/sites/:id', to: 'sites#show'
+  get '/sites/index', to: 'sites#new'
 end
