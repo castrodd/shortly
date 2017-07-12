@@ -14,7 +14,7 @@ class SitesController < ApplicationController
       @site = Site.create(site_params)
 
       if @site.save
-        redirect_to 'site#show'
+        redirect_to 'sites#show'
       else
         redirect_to new_site_path
       end
