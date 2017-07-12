@@ -7,13 +7,14 @@ class SitesController < ApplicationController
     end
 
     def show
+      @site = Site.last
     end
 
     def create
       @site = Site.create(site_params)
 
       if @site.save
-        redirect_to site_path(:id => @site.id)
+        redirect_to 'site#show'
       else
         redirect_to new_site_path
       end
