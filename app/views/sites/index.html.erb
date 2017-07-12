@@ -1,5 +1,7 @@
 <h1>All the Shortlies</h1>
 
+<ul>
 <%= @site.each do |s| %>
-<%= s.id %>". "<%= s.name %>
+<li><%= s.name %></li>
 <% end %>
+</ul>
