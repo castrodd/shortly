@@ -7,8 +7,7 @@ class SitesController < ApplicationController
     end
 
     def show
-      @site = Site.find(params(:id))
-      #redirect_to site_path(@site)
+      
     end
 
     def create
