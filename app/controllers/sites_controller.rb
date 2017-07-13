@@ -8,8 +8,11 @@ class SitesController < ApplicationController
     end
 
     def show
-      @site = Site.find(params[:id])
-      redirect_to @site.name
+      if params[:id] != 'sites'
+         @site = Site.find(params[:id])
+         redirect_to @site.name
+      else
+        render :index
     end
 
     def create

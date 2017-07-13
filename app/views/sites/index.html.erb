@@ -1,3 +1,4 @@
+<div class = "show">
 <h1>All the Shortlies</h1>
 
 <table style="width: 100%">
@@ -9,9 +10,10 @@
 
     <% @sites.each do |s| %>
      <tr>
-      <td><%= s.name[0,20] %>...</td>
+      <td><%= s.name[0,40] %>...</td>
       <td>www.ortly.herokuapp.com/<%= s.id %></td>
      </tr>
     <% end %>
 
 </table>
+</div>
