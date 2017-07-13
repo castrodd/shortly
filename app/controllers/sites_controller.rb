@@ -8,14 +8,14 @@ class SitesController < ApplicationController
     end
 
     def show
-      @site = Site.find(params[:id])
+      render 'sites#index'
     end
 
     def create
       @site = Site.create(site_params)
 
       if @site.save
-        redirect_to site_path
+        redirect_to '/sites/:id'
       else
         redirect_to new_site_path
       end
