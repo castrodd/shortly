@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  root 'sites#new'
-  resources :sites, only: [:new, :show, :create, :index]
+  root 'site#new'
+  resources :site, only: [:new, :show, :create, :index]
 end
