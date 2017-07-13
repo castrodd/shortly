@@ -1,6 +1,6 @@
 class SiteController < ApplicationController
     def index
-      @site = Site.all
+      @sites = Site.all
     end
 
     def new
@@ -15,7 +15,7 @@ class SiteController < ApplicationController
       @site = Site.create(site_params)
 
       if @site.save
-        redirect_to '/sites/:id'
+        redirect_to '/site/:id'
       else
         redirect_to new_site_path
       end
