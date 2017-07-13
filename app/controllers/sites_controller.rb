@@ -8,7 +8,7 @@ class SitesController < ApplicationController
     end
 
     def show
-      @site = Site.where({id: params['id'].to_i})
+      @site = Site.where({id: params[:id]})
     end
 
     def create
