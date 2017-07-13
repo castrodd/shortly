@@ -8,7 +8,7 @@ class SitesController < ApplicationController
     end
 
     def show
-      @site = Site.find_by id: params[:id]
+      @site = Site.find_by(id: params['id'])
     end
 
     def create
