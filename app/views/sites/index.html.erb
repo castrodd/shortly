@@ -1,9 +1,17 @@
-<div>
-  <h1>All the Shortlies</h1>
+<h1>All the Shortlies</h1>
 
-  <ol>
+<table style="width: 100%">
+  <tr>
+    <th>Longly</th>
+    <th>Shortly</th>
+  </tr>
+
+
     <% @sites.each do |s| %>
-    <li><%= s.name %></li>
+     <tr>
+      <td><%= s.name[0,20] %>...</td>
+      <td>www.ortly.herokuapp.com/<%= s.id %></td>
+     </tr>
     <% end %>
-  </ol>
-</div>
+
+</table>
