@@ -9,10 +9,10 @@
 
 
     <% @sites.each do |s| %>
-      current = <%= "www.ortly.herokuapp.com/#{s.id}" %>
+      
      <tr>
       <td><%= s.name[0,40] %>...</td>
-      <td><a href=current>www.ortly.herokuapp.com/<%= s.id %></a></td>
+      <td><a href=<%= "www.ortly.herokuapp.com/#{s.id}" %>>www.ortly.herokuapp.com/<%= s.id %></a></td>
      </tr>
     <% end %>
 
