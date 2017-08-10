@@ -1,7 +1,8 @@
 <div>
   <h1>Enter a longly URL:</h1>
   <%= form_for @site do |f| %>
-  <%=  f.text_field :name %>
-  <%= f.submit 'Get your shortly URL'%>
+    <%=  f.text_field :name %>
+    <%= f.submit 'Get your shortly URL'%>
   <% end %>
+  <div><%= link_to 'See \'em all', sites_path %><div>
 </div>
